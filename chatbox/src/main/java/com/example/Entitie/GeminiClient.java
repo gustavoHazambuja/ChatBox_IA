@@ -1,7 +1,7 @@
 package com.example.Entitie;
 
-import com.google.gson.*;
-import okhttp3.*;
+import com.google.gson.*; // Biblioteca para manipulação de JSON
+import okhttp3.*; // Cliente HTTP para enviar requisições
 
 import java.io.IOException;
 
@@ -10,11 +10,12 @@ import java.io.IOException;
 // Envia uma pergunta e recebe uma resposta com tom sarcástico/ranzinza
 public class GeminiClient {
     
-    private static final String API_KEY = "AIzaSyB8wAgUd90VVrSkHv-LhYvaYCOUs242zQc";
+    private static final String API_KEY = "AIzaSyB8wAgUd90VVrSkHv-LhYvaYCOUs242zQc"; // Chave da API
+    // Endereço da API
     private static final String ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + API_KEY;
 
-    private final OkHttpClient client;
-    private final Gson gson;
+    private final OkHttpClient client; // Cliente HTTP para enviar requesições
+    private final Gson gson; // Conversor de JSON
 
 
     public GeminiClient(){
